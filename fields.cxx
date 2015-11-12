@@ -27,5 +27,12 @@ void update_temperature(const Param &param, const Variables &var,
 {
 
     // To be completed
+	double *A, *b, *x;
+	A = (double *)(malloc(N*N*(sizeof(double))));
+	b = (double *)(malloc(N*(sizeof(double))));
+	x = (double *)(malloc(N*(sizeof(double))));
 
+	solver_cg(A, b, x);
+
+	// store x
 }
